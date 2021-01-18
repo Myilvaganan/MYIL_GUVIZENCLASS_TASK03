@@ -55,7 +55,7 @@ request4.send();
 request4.onload = function (){
     var data= JSON.parse(this.response);
     var dollarAsCurrencyCountries= data.filter((item)=> {
-      	return item.currencies[0]['symbol'] ==="$";
+      	return item.currencies[0]['code'] ==="USD";
     });
     console.log(dollarAsCurrencyCountries);
 }
